@@ -4,7 +4,7 @@ import styles from './Header.module.scss';
 
 import { Wrapper as PopperWrapper } from "../../Popper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark, faCloudUpload, faCoins, faEllipsisVertical, faGear, faMagnifyingGlass, faSignOut, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark, faCoins, faEllipsisVertical, faGear, faMagnifyingGlass, faSignOut, faSpinner, faUser } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react";
 import HeadlessTippy from "@tippyjs/react";
 import { useEffect, useState } from "react";
@@ -13,6 +13,8 @@ import Button from '../Button/index';
 import Menu from '~/components/Layout/Popper/Menu/'
 import { faCircleQuestion, faEarthAsia, faKeyboard } from "@fortawesome/free-solid-svg-icons";
 import 'tippy.js/dist/tippy.css';
+import { UploadIcon } from '../Icons/icons';
+import Image from "../Image";
 
 const cx = classNames.bind(styles);
 
@@ -62,7 +64,7 @@ function Header() {
 
     const userMenu = [
         {
-            icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+            icon: <FontAwesomeIcon icon={faUser} />,
             title: 'View profile',
             to: "/@hoaa"
         },
@@ -125,17 +127,14 @@ function Header() {
                         <Tippy content="Upload Video"
                             placement="bottom"
                         >
-                            <button>
-                                <FontAwesomeIcon icon={faCloudUpload}></FontAwesomeIcon>
+                            <button className={cx('action-btn')}>
+                                <UploadIcon />
                             </button>
-
                         </Tippy>
                     ) : (
                         <>
                             <Button text>Upload</Button>
                             <Button primary>Log in</Button>
-
-
                         </>
                     )
                 }
@@ -143,7 +142,12 @@ function Header() {
                 <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                     {
                         currentUser ? (
-                            <img src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/c0e5acb353efad347ae0ba5a87574f1d~c5_100x100.jpeg?x-expires=1675843200&x-signature=H%2B6blRJ%2FcDzNF1GIPtXBgdJgrgo%3D" className={cx('user-avatar')} alt="luong tand ai" />
+                            <Image
+                                className={cx('user-avatar')}
+                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/c0e5acb353efad347ae0ba5a87574f1d~c5_100x100.jpeg?x-expires=1675843200&x-signature=H%2B6blRJ%2FcDzNF1GIPtXBgdJgrgo%3D"
+                                alt="luong tand ai"
+                                fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
+                            />
                         ) : (
                             <button className={cx('more-btn')} >
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
