@@ -21,6 +21,8 @@ import "tippy.js/dist/tippy.css";
 import { UploadIcon, MessageIcon, InboxIcon } from "../Icons/icons";
 import Image from "../Image";
 import Search from "../Search";
+import { Link } from "react-router-dom";
+import config from "~/config";
 
 const cx = classNames.bind(styles);
 
@@ -90,9 +92,11 @@ function Header() {
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
         <div className={cx("logo-link")}>
-          <img src={images.logo} alt="Logo Tiktok" />
+          <Link to={config.routes.home} className={cx('logo-link')}>
+            <img src={images.logo} alt="Logo Tiktok" />
+          </Link>
         </div>
-        
+
         <Search></Search>
 
         <div className={cx("actions")}>
