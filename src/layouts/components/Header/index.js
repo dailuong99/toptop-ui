@@ -31,7 +31,7 @@ const MENU_ITEMS = [
     icon: <FontAwesomeIcon icon={faEarthAsia} />,
     title: "English",
     children: {
-      title: "language",
+      title: "Language",
       data: [
         {
           code: "en",
@@ -133,7 +133,7 @@ function Header() {
             {currentUser ? (
               <Image
                 className={cx("user-avatar")}
-                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/c0e5acb353efad347ae0ba5a87574f1d~c5_100x100.jpeg?x-expires=1675843200&x-signature=H%2B6blRJ%2FcDzNF1GIPtXBgdJgrgo%3D"
+                src="https://yt3.ggpht.com/yti/AHXOFjV80YpBsolCZlEvtkhf-3MWa1qPmZJIFo396g=s88-c-k-c0x00ffffff-no-rj-mo"
                 alt="luong tand ai"
                 fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
               />
