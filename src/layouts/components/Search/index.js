@@ -5,10 +5,10 @@ import HeadlessTippy from "@tippyjs/react/headless";
 import AccountItem from "~/components/AccountItem/item";
 import styles from "./Search.module.scss";
 import { useEffect, useRef, useState } from "react";
-import { Wrapper as PopperWrapper } from "../../Popper";
-import { SearchIcon } from "../Icons/icons";
+import { Wrapper as PopperWrapper } from "~/components/Popper";
+import { SearchIcon } from "~/components/Icons/icons";
 import { useDebounce } from "~/hooks";
-import * as searchServices from "~/apiServices/searchService";
+import * as searchServices from "~/services/searchService";
 
 const cx = classNames.bind(styles);
 

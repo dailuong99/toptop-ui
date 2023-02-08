@@ -10,16 +10,16 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react";
-import Button from "../Button/index";
-import Menu from "~/components/Layout/Popper/Menu/";
+import Button from "~/components/Button";
+import Menu from "~/components/Popper/Menu";
 import {
   faCircleQuestion,
   faEarthAsia,
   faKeyboard,
 } from "@fortawesome/free-solid-svg-icons";
 import "tippy.js/dist/tippy.css";
-import { UploadIcon, MessageIcon, InboxIcon } from "../Icons/icons";
-import Image from "../Image";
+import { UploadIcon, MessageIcon, InboxIcon } from "~/components/Icons/icons";
+import Image from "~/components/Image";
 import Search from "../Search";
 import { Link } from "react-router-dom";
 import config from "~/config";

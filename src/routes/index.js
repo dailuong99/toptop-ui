@@ -6,7 +6,7 @@ import Following from "~/pages/Following";
 import Upload from "~/pages/Upload";
 import Search from "~/pages/Search";
 
-import { HeaderOnly } from "~/components/Layout";
+import { HeaderOnly } from "~/layouts";
 
 const publicRoutes = [
   { path: config.routes.home, component: Home },
