@@ -7,6 +7,7 @@ import {
   UserGroupActiveIcon,
   UserGroupIcon,
 } from "~/components/Icons/Icons";
+import SuggestedAccounts from "~/components/SuggestedAccounts";
 import config from "~/config";
 import Menu, { MenuItem } from "./Menu";
 import styles from "./Sidebar.module.scss";
@@ -36,6 +37,8 @@ function Sidebar() {
           activeIcon={<LiveActiveIcon />}
         ></MenuItem>
       </Menu>
+      <SuggestedAccounts label="Sugguested accounts"></SuggestedAccounts>
+      {/* <SuggestedAccounts label="Following accounts"></SuggestedAccounts> */}
     </aside>
   );
 }
