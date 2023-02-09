@@ -6,7 +6,7 @@ import AccountItem from "~/components/AccountItem/item";
 import styles from "./Search.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { Wrapper as PopperWrapper } from "~/components/Popper";
-import { SearchIcon } from "~/components/Icons/icons";
+import { SearchIcon } from "~/components/Icons/Icons";
 import { useDebounce } from "~/hooks";
 import * as searchServices from "~/services/searchService";
 

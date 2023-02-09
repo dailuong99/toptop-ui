@@ -18,7 +18,7 @@ import {
   faKeyboard,
 } from "@fortawesome/free-solid-svg-icons";
 import "tippy.js/dist/tippy.css";
-import { UploadIcon, MessageIcon, InboxIcon } from "~/components/Icons/icons";
+import { UploadIcon, MessageIcon, InboxIcon } from "~/components/Icons/Icons";
 import Image from "~/components/Image/Image";
 import Search from "../Search";
 import { Link } from "react-router-dom";
